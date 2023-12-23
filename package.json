@@ -4,10 +4,23 @@
   "description": "hackish translator using OpenAI API",
   "author": "slainless",
   "license": "MIT",
-  "private": false,
   "type": "module",
   "devDependencies": {
     "@carbon/web-components": "^2.1.0",
-    "lit": "^3.1.0"
-  }
+    "@storybook/addon-essentials": "7.6.6",
+    "@storybook/addon-links": "7.6.6",
+    "@storybook/blocks": "7.6.6",
+    "@storybook/web-components": "7.6.6",
+    "@storybook/web-components-vite": "7.6.6",
+    "lit": "^3.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "7.6.6",
+    "vite": "^5.0.10"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "packageManager": "yarn@4.0.2"
 }
