@@ -1,0 +1,10 @@
+{{- $opts := dict 
+  "format" "esm" 
+  "target" "esnext" 
+  "minify" hugo.IsProduction
+-}}
+{{- $js := resources.Get . | js.Build $opts -}}
+{{- if hugo.IsProduction -}}
+  {{ $js = $js | fingerprint }}
+{{- end -}}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>

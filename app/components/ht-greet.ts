@@ -1,7 +1,8 @@
-import { html, css, LitElement, customElement, property } from '/modules/lit.js'
-import 'https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/button.min.js'
+import { html, css, LitElement } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
+import '@carbon/web-components/es/components/button/index.js'
 
-@customElement('simple-greeting')
+@customElement('ht-greet')
 export class SimpleGreeting extends LitElement {
   static styles = css`
     p {
