@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "allowJs": true,
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "useDefineForClassFields": false,
+    "module": "NodeNext",
+    "paths": {
+      "/modules/*": ["assets/_modules/*"], 
+      "https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/*": ["./node_modules/@carbon/web-components/dist/*"], 
+    }
+  },
+  "buildOptions": {},
+}

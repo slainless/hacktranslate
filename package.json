@@ -1,0 +1,13 @@
+{
+  "name": "hacktranslator",
+  "version": "0.0.1",
+  "description": "hackish translator using OpenAI API",
+  "author": "slainless",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "devDependencies": {
+    "@carbon/web-components": "^2.1.0",
+    "lit": "^3.1.0"
+  }
+}

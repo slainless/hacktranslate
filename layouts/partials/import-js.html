@@ -1,0 +1,9 @@
+{{ $minify := cond hugo.IsProduction true false }}
+{{ $externals := slice "/modules/*" "/components/*" }}
+{{ $esBuildOptions := dict "format" "esm" "target" "esnext" "externals" $externals "minify" $minify }}
+{{ warnf "%T" . }}
+
+{{ $input := cond (hasPrefix . "_") . (printf "_%v" .)}}
+{{ $out   := cond (hasPrefix . "_") (strings.TrimLeft "_" .) .}}
+{{ $js := resources.Get $input | js.Build (merge $esBuildOptions (dict "targetPath" (replaceRE `\.ts$` ".js" $out))) }}
+<script type="module" src="{{ $js.Permalink }}"></script>
