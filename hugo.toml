@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'Hacktranslator'
+title = 'hacktranslator'
 disableKinds = ["taxonomy", "term"]
 [build]
   noJSConfigInAssets = false
