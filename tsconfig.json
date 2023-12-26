@@ -14,5 +14,5 @@
       "Modules/*": ["./app/modules/*"]
     }
   },
-  "include": ["./assets/**/*", "./app/**/*"]
+  "include": ["./app/**/*"]
 }
