@@ -1,0 +1,3 @@
+{{- range $component := .Page.Params.components }}
+  {{- partial "import/js" (printf "artifact/components/%v.js" $component) }}
+{{- end }}

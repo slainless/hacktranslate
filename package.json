@@ -12,15 +12,21 @@
     "@storybook/blocks": "7.6.6",
     "@storybook/web-components": "7.6.6",
     "@storybook/web-components-vite": "7.6.6",
+    "esbuild": "0.19.10",
+    "esbuild-sass-plugin": "^2.16.1",
     "lit": "^3.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rimraf": "^5.0.5",
     "sass": "^1.69.5",
     "storybook": "7.6.6",
     "vite": "^5.0.10",
     "vite-tsconfig-paths": "^4.2.2"
   },
   "scripts": {
+    "build": "node ./scripts/build.js",
+    "dev:esbuild": "WATCH=true rimraf ./assets/artifact && node ./scripts/build.js",
+    "dev:hugo": "hugo server",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

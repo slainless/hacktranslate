@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true,
+    "module": "NodeNext",
+    "resolveJsonModule": true,
+    "moduleResolution": "nodenext"
+  }
+}

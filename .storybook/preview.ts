@@ -1,6 +1,6 @@
 import { Preview } from '@storybook/web-components'
-import '../assets/index'
-import '../assets/index.scss'
+import '../app/index'
+import '../app/index.scss'
 
 const preview: Preview = {
   parameters: {

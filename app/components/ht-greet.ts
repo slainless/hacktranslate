@@ -1,6 +1,4 @@
-import { html, css, LitElement } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
-import '@carbon/web-components/es/components/button/index.js'
+import { html, css, LitElement, customElement, property } from 'Modules/lit.js'
 
 @customElement('ht-greet')
 export class SimpleGreeting extends LitElement {
@@ -15,7 +13,7 @@ export class SimpleGreeting extends LitElement {
 
   render() {
     return html`
-      <div>
+      <div class="hehe">
         <cds-button>Click Here, ${this.name}</cds-button>
       </div>
     `

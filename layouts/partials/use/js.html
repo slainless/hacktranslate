@@ -1,4 +1,9 @@
-{{- $js := resources.Get . -}}
+{{- $opts := dict 
+  "format" "esm" 
+  "target" "esnext" 
+  "minify" hugo.IsProduction
+-}}
+{{- $js := resources.Get . | js.Build $opts -}}
 {{- if hugo.IsProduction -}}
   {{- $js = $js | fingerprint -}}
 {{- end -}}

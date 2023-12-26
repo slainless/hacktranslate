@@ -7,10 +7,25 @@
         {{ .Site.Title }}
       {{- end -}}
     </title>
-    {{ partialCached "import/js" "index.ts" }}
-    {{ partialCached "import/css" "index.scss" }}
+    {{/*  build entrypoints  */}}
+    {{ partial "use/js" "index.ts" }}
+    {{ partial "use/css" "index.scss" }}
     <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/plex.css" />
     <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/grid.css" />
+    {{/*  import all chunks  */}}
+    {{- range $file := readDir "assets/artifact" }}
+    {{-    with (and (not $file.IsDir) $file) }}
+    {{        partial "import/js" (printf "artifact/%v" .Name) }}
+    {{-    end }}
+    {{- end }}
+    {{/*  import all modules  */}}
+    {{- range $file := readDir "assets/artifact/modules" }}
+    {{-    with (and (not $file.IsDir) $file) }}
+    {{        partial "import/js" (printf "artifact/modules/%v" .Name) }}
+    {{-    end }}
+    {{- end }}
+    {{/*  import all from frontmatter  */}}
+    {{ partial "import/frontmatter" . }}
   </head>
   <body>
     {{- block "main" . -}}

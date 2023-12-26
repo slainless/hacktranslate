@@ -1,10 +1,5 @@
-{{- $opts := dict
-  "transpiler" "dartsass"
-  "enableSourceMap" (not hugo.IsProduction) 
-  "includePaths" (slice "node_modules")
--}}
-{{- $css := resources.Get . | toCSS $opts -}}
+{{- $css := resources.Get . -}}
 {{- if hugo.IsProduction -}}
-  {{ $css = $css | minify | fingerprint }}
+  {{- $css = $css | fingerprint -}}
 {{- end -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">

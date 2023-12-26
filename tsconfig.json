@@ -9,11 +9,10 @@
     "useDefineForClassFields": false,
     "module": "NodeNext",
     "paths": {
-      "app/*": ["./app/*"],
-    },
+      "App/*": ["./app/*"],
+      "Components/*": ["./app/components/*"],
+      "Modules/*": ["./app/modules/*"]
+    }
   },
-  "include": [
-    "./assets/**/*",
-    "./app/**/*"
-  ],
+  "include": ["./assets/**/*", "./app/**/*"]
 }
