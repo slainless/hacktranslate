@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "node ./scripts/build.js",
-    "dev:esbuild": "WATCH=true rimraf ./artifact && node ./scripts/build.js",
+    "dev:esbuild": "rimraf ./artifact && WATCH=true node ./scripts/build.js",
     "dev:hugo": "hugo server",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

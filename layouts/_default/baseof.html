@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/plex.css" />
     <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/web-components/tag/v2/latest/grid.css" />
     {{/*  import all chunks  */}}
-    {{- range $file := readDir "assets/artifact" }}
+    {{- range $file := readDir "artifact" }}
     {{-    with (and (not $file.IsDir) $file) }}
     {{        partial "import/js" (printf "artifact/%v" .Name) }}
     {{-    end }}
     {{- end }}
     {{/*  import all modules  */}}
-    {{- range $file := readDir "assets/artifact/modules" }}
+    {{- range $file := readDir "artifact/modules" }}
     {{-    with (and (not $file.IsDir) $file) }}
     {{        partial "import/js" (printf "artifact/modules/%v" .Name) }}
     {{-    end }}
