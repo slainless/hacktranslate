@@ -18,22 +18,4 @@ export function externals() {
   return esbuild.inputDir.map((dir) => dir.alias)
 }
 
-export function replacePath() {
-  const plugin = {
-    name: 'alias-replace-path',
-    setup(build) {
-      build.onResolve({ filter: /.*/ }, (args) => {
-        for (const entry of esbuild.inputDir)
-          if (entry.alias.test(args.path))
-            return {
-              path: args.path.replace(entry.alias, entry.transform),
-              external: true,
-            }
-        return
-      })
-    },
-  }
-  return plugin
-}
-
 export { esbuild }

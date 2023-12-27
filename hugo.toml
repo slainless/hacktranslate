@@ -17,6 +17,9 @@ disableKinds = ["taxonomy", "term"]
   source = 'layouts'
   target = 'layouts'
 [[module.mounts]]
+  source = 'artifact/ssr_components'
+  target = 'layouts/partials/artifact/components'
+[[module.mounts]]
   source = 'data'
   target = 'data'
 [[module.mounts]]
@@ -25,6 +28,9 @@ disableKinds = ["taxonomy", "term"]
 [[module.mounts]]
   source = 'app'
   target = 'assets'
+[[module.mounts]]
+  source = 'artifact'
+  target = 'assets/artifact'
 [[module.mounts]]
   source = 'i18n'
   target = 'i18n'

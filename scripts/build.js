@@ -1,6 +1,7 @@
 import { build, context } from 'esbuild'
 import { sassPlugin } from 'esbuild-sass-plugin'
-import { entrypoints, esbuild, externals, replacePath } from './build/config.js'
+import { entrypoints, esbuild } from './build/config.js'
+import { replacePath, ssrComponentsBuild } from './build/plugins.js'
 
 /** @type import('esbuild').BuildOptions **/
 const config = {
@@ -15,7 +16,11 @@ const config = {
   // external: externals(),
   outdir: esbuild.outputDir,
 
-  plugins: [sassPlugin(), replacePath()],
+  plugins: [
+    sassPlugin(),
+    replacePath(esbuild.inputDir),
+    ssrComponentsBuild(esbuild.inputDir),
+  ],
 }
 
 if (process.env.WATCH == null) build(config)

@@ -1,4 +1,5 @@
-import { html, css, LitElement, customElement, property } from 'Modules/lit.js'
+import { html, css, LitElement } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
 
 @customElement('ht-greet')
 export class SimpleGreeting extends LitElement {

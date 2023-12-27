@@ -7,6 +7,7 @@
   "type": "module",
   "devDependencies": {
     "@carbon/web-components": "^2.1.0",
+    "@lit-labs/ssr": "^3.2.0",
     "@storybook/addon-essentials": "7.6.6",
     "@storybook/addon-links": "7.6.6",
     "@storybook/blocks": "7.6.6",
@@ -25,7 +26,7 @@
   },
   "scripts": {
     "build": "node ./scripts/build.js",
-    "dev:esbuild": "WATCH=true rimraf ./assets/artifact && node ./scripts/build.js",
+    "dev:esbuild": "WATCH=true rimraf ./artifact && node ./scripts/build.js",
     "dev:hugo": "hugo server",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

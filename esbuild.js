@@ -1,5 +1,5 @@
 export default {
-  outputDir: './assets/artifact',
+  outputDir: './artifact',
   inputDir: [
     {
       dir: './app/components',
@@ -10,6 +10,10 @@ export default {
       dir: './app/modules',
       alias: /^Modules\/(.*)/,
       transform: '/artifact/modules/$1',
+    },
+    {
+      ssr: true,
+      dir: './app/ssr_components',
     },
   ],
 }
