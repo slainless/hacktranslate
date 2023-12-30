@@ -17,7 +17,8 @@ async function renderComponent(contents) {
   const base64module = `data:text/javascript;base64,${Buffer.from(
     contents
   ).toString('base64')}`
-  const imported = await import(base64module)
+  console.log(Buffer.from(contents).toString('base64'))
+  const imported = await import('../../test2.js')
   const result = render(imported.default())
   return collectResult(result)
 }
@@ -61,7 +62,7 @@ export function ssrComponentsBuild(inputDir) {
             external: ['lit'],
             plugins: [
               sassPlugin(),
-              replacePath([nodeModulesAlias('lit', 'lit/index.js')]),
+              // replacePath([nodeModulesAlias('lit', 'lit/index.js')]),
             ],
           })
           const module = result.outputFiles.find(

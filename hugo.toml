@@ -30,7 +30,7 @@ disableKinds = ["taxonomy", "term"]
   target = 'assets'
 [[module.mounts]]
   source = 'artifact'
-  target = 'assets/artifact'
+  target = 'static'
 [[module.mounts]]
   source = 'i18n'
   target = 'i18n'

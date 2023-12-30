@@ -1,5 +1,6 @@
 import { html, css, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+import { CONSTANT_TEXT } from '../common.js'
 
 @customElement('ht-greet')
 export class SimpleGreeting extends LitElement {
@@ -10,7 +11,7 @@ export class SimpleGreeting extends LitElement {
   `
 
   @property()
-  name = 'Somebody'
+  name = CONSTANT_TEXT
 
   render() {
     return html`

@@ -7,12 +7,11 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "useDefineForClassFields": false,
-    "module": "NodeNext",
-    "paths": {
-      "App/*": ["./app/*"],
-      "Components/*": ["./app/components/*"],
-      "Modules/*": ["./app/modules/*"]
-    }
+    "module": "NodeNext"
   },
-  "include": ["./app/**/*"]
+  "include": ["./app/**/*"],
+  "ts-node": {
+    "swc": true,
+    "esm": true
+  }
 }

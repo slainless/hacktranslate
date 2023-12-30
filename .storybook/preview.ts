@@ -1,5 +1,6 @@
 import { Preview } from '@storybook/web-components'
 import '../app/index'
+import '../app/modules/carbon'
 import '../app/index.scss'
 
 const preview: Preview = {
